@@ -1,0 +1,21 @@
+body{
+    background-color: #E6E6E6;
+}
+
+p{
+    text-indent: 40px;
+}
+
+/*Add .axis path and .axis line commans as described in the book, these axes are composed of the elements (path, line, and text), we must put these elements in our css in order to style them, text is separate from path and line because it requires additional components such as font and size, which don't make sense in the context of path and line */
+.axis path,
+.axis line {
+    stroke: teal;
+    shape-rendering: crispEdges;
+}
+
+
+.axis text{
+    font: Times;
+    font-size: 12px;
+    font-weight: bold;
+}

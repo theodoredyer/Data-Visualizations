@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fruit</title>
+        <script type="text/javascript" src=https://d3js.org/d3.v5.min.js></script>
+    </head>
+    <body>
+        
+        <script> 
+        document.body.style.backgroundColor = "#AAAAAA";
+        </script>
+        
+        <p id="fruit1"></p>
+        <p id="fruit2"></p>
+        <p id="fruit3"></p>
+        
+        <script type="text/javascript">
+        var fruits = [
+            {
+                kind: "grape",
+                color: "red",
+                quantity: 12,
+                tasty: true
+            },
+            {
+                kind: "kiwi",
+                color: "brown",
+                quantity: 98,
+                tasty: true
+            },
+            {
+                kind: "banana",
+                color: "yellow",
+                quantity: 0,
+                tasty: true
+            }
+        ];
+            
+        
+            var i;
+            var idtag;
+            for(i = 1; i < 4; i++) {
+                idtag = "fruit" + i;
+                console.log(idtag);
+                document.getElementById(idtag).style.color = fruits[i-1].color;
+                var retstr = (fruits[i-1].quantity + " " + fruits[i-1].kind);
+                document.getElementById(idtag).innerHTML = retstr;
+            }
+            
+        </script>
+
+    </body>
+</html>
